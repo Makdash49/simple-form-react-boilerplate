@@ -17,6 +17,8 @@ import Form from './Form';
 import Input from './Input';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
+import { changeWord } from './actions';
+
 
 
 
@@ -35,6 +37,8 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
             id="username"
             type="text"
             placeholder="Enter a word here."
+            value={this.props.word}
+            onChange={this.props.onChangeWord}
           />
         </Form>
 
@@ -43,16 +47,20 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
   }
 }
 
-
 export function mapDispatchToProps(dispatch) {
   return {
+    onChangeWord: (evt) => dispatch(changeWord(evt.target.value)),
     onSubmitForm: (evt) => {
       if (evt !== undefined && evt.preventDefault) evt.preventDefault();
-      console.log("You submitted a form!!!!");
+      console.log('Form Submitted!');
       // dispatch(loadRepos());
     },
   };
 }
+
+
+
+
 
 const mapStateToProps = createStructuredSelector({
 });
