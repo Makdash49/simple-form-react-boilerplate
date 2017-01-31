@@ -19,9 +19,7 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { changeWord } from './actions';
 import { makeSelectWord } from './selectors';
-
-
-
+import { saveWord } from '../App/actions';
 
 
 
@@ -56,6 +54,7 @@ export function mapDispatchToProps(dispatch) {
       if (evt !== undefined && evt.preventDefault) evt.preventDefault();
       console.log('Form Submitted!');
       // dispatch(loadRepos());
+      dispatch(saveWord());
     },
   };
 }
