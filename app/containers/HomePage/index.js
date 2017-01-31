@@ -18,6 +18,8 @@ import Input from './Input';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { changeWord } from './actions';
+import { makeSelectWord } from './selectors';
+
 
 
 
@@ -63,8 +65,8 @@ export function mapDispatchToProps(dispatch) {
 
 
 const mapStateToProps = createStructuredSelector({
+  word: makeSelectWord(),
 });
-
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(HomePage);
