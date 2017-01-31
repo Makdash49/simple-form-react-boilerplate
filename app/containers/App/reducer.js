@@ -26,7 +26,7 @@ function appReducer(state = initialState, action) {
     case SAVE_WORD:
     console.log('IN SAVE_WORD REDUCER');
       return state
-        .setIn('allWords', "Mr. Moooonlight!!!!");
+      .setIn(['allWords'], "Mr. Moonlight");
     default:
       return state;
   }
