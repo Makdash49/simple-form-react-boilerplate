@@ -53,15 +53,10 @@ export function mapDispatchToProps(dispatch) {
     onSubmitForm: (evt) => {
       if (evt !== undefined && evt.preventDefault) evt.preventDefault();
       console.log('Form Submitted!');
-      // dispatch(loadRepos());
       dispatch(saveWord());
     },
   };
 }
-
-
-
-
 
 const mapStateToProps = createStructuredSelector({
   word: makeSelectWord(),
