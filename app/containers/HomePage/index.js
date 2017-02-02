@@ -23,7 +23,7 @@ import { makeSelectAllWords} from 'containers/App/selectors';
 
 import { saveWord } from '../App/actions';
 // import ReposList from 'components/ReposList';
-import WordsList from 'components/WordsList';
+// import WordsList from 'components/WordsList';
 
 
 
@@ -57,7 +57,6 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
             onChange={this.props.onChangeWord}
           />
         </Form>
-        <WordsList{...wordsListProps} />
 
 
       </div>

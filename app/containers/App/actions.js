@@ -28,7 +28,9 @@ export function saveWord(word) {
   console.log('IN THE SAVEWORD ACTION');
   return {
     type: SAVE_WORD,
-    word
+    word: {
+      text: word
+    }
   };
 }
 
