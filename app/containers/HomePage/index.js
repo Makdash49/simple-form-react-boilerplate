@@ -30,6 +30,9 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
   render() {
     console.log('LOOKING FOR PROPS: ', this.props);
     console.log('LOOKING FOR ALLWORDS: ', this.props.allWords);
+    if (this.props.allWords._tail){
+      console.log('LOOKING FOR ALLWORDS._TAIL: ', this.props.allWords._tail.array);
+    }
     return (
       <div>
         <h1>
