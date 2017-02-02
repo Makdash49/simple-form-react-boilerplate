@@ -57,6 +57,7 @@ export function mapDispatchToProps(dispatch) {
       if (evt !== undefined && evt.preventDefault) evt.preventDefault();
       console.log('Form Submitted!');
       dispatch(saveWord(currentWord));
+      dispatch(changeWord(""));
     },
   };
 }
