@@ -1,4 +1,12 @@
 // makeSelectLocationState expects a plain JS object for the routing state
+
+
+
+const makeSelectAllWords = () => createSelector(
+  selectGlobal,
+  (globalState) => globalState.getIn(['userData', 'repositories'])
+);
+
 const makeSelectLocationState = () => {
   let prevRoutingState;
   let prevRoutingStateJS;
@@ -17,4 +25,5 @@ const makeSelectLocationState = () => {
 
 export {
   makeSelectLocationState,
+  makeSelectAllWords,
 };
