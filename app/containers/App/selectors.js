@@ -1,10 +1,13 @@
 // makeSelectLocationState expects a plain JS object for the routing state
 
+import { createSelector } from 'reselect';
+
+const selectGlobal = (state) => state.get('global');
 
 
 const makeSelectAllWords = () => createSelector(
   selectGlobal,
-  (globalState) => globalState.getIn(['userData', 'repositories'])
+  (globalState) => globalState.getIn(['allWords'])
 );
 
 const makeSelectLocationState = () => {

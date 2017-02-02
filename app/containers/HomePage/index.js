@@ -19,6 +19,8 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { changeWord } from './actions';
 import { makeSelectWord } from './selectors';
+import { makeSelectAllWords} from 'containers/App/selectors';
+
 import { saveWord } from '../App/actions';
 
 
@@ -27,6 +29,7 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
 
   render() {
     console.log('LOOKING FOR PROPS: ', this.props);
+    console.log('LOOKING FOR ALLWORDS: ', this.props.allWords);
     return (
       <div>
         <h1>
