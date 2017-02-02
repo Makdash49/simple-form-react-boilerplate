@@ -24,10 +24,11 @@ import {
  *
  * @return {object} An action object with a type of LOAD_REPOS
  */
-export function saveWord() {
+export function saveWord(word) {
   console.log('IN THE SAVEWORD ACTION');
   return {
     type: SAVE_WORD,
+    word
   };
 }
 

@@ -28,7 +28,7 @@ function appReducer(state = initialState, action) {
     case SAVE_WORD:
     console.log('IN SAVE_WORD REDUCER');
       return state
-      .setIn(['allWords'], allTheWords.concat(["Another word"]));
+      .setIn(['allWords'], allTheWords.concat([action.word]));
     default:
       return state;
   }

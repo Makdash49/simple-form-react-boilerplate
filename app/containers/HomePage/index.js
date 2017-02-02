@@ -48,12 +48,15 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
 }
 
 export function mapDispatchToProps(dispatch) {
+  var currentWord;
   return {
-    onChangeWord: (evt) => dispatch(changeWord(evt.target.value)),
+    onChangeWord: (evt) => {dispatch(changeWord(evt.target.value));
+      currentWord = evt.target.value;
+    },
     onSubmitForm: (evt) => {
       if (evt !== undefined && evt.preventDefault) evt.preventDefault();
       console.log('Form Submitted!');
-      dispatch(saveWord());
+      dispatch(saveWord(currentWord));
     },
   };
 }
