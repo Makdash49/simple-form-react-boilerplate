@@ -23,7 +23,7 @@ import { makeSelectAllWords} from 'containers/App/selectors';
 
 import { saveWord } from '../App/actions';
 // import ReposList from 'components/ReposList';
-// import WordsList from 'components/WordsList';
+import WordsList from 'components/WordsList';
 
 
 
@@ -38,8 +38,13 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
       console.log('LOOKING FOR ALLWORDS._TAIL: ', this.props.allWords._tail.array);
     }
 
+
+    const { loading, error } = this.props;
+
     const wordsListProps = {
-      wordsArray
+      loading,
+      error,
+      wordsArray,
     };
 
     return (
@@ -57,6 +62,7 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
             onChange={this.props.onChangeWord}
           />
         </Form>
+        <WordsList {...wordsListProps} />
 
 
       </div>

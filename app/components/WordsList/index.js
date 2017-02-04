@@ -1,17 +1,53 @@
+// import React, { PropTypes } from 'react';
+// import List from 'components/List';
+// import ListItem from 'components/ListItem';
+//
+// function WordsList({words}) {
+//
+//   const ErrorComponent = () => (
+//     <ListItem item={'Something went wrong, please try again!'} />
+//   );
+//   return <List component={ErrorComponent} />;
+//
+//   WordsList.propTypes = {
+//     words: PropTypes.any
+//   };
+//
+// }
+//
+// export default WordsList;
+//
+//
+
+
 import React, { PropTypes } from 'react';
+
 import List from 'components/List';
 import ListItem from 'components/ListItem';
+// import LoadingIndicator from 'components/LoadingIndicator';
+// import RepoListItem from 'containers/RepoListItem';
 
-function WordsList({words}) {
+function WordsList({ loading, error, wordsArray }) {
+  // if (loading) {
+  //   return <List component={LoadingIndicator} />;
+  // }
 
-  if (words !== false) {
-    return <List items={words} />;
-  }
-  return null;
+    const ErrorComponent = () => (
+      <ListItem item={'Something went wrong, please try again!'} />
+    );
+    return <List component={ErrorComponent} />;
+
+  // if (repos !== false) {
+  //   return <List items={wordsArray} component={RepoListItem} />;
+  // }
+
+  // return null;
 }
 
 WordsList.propTypes = {
-  words: PropTypes.any
+  loading: PropTypes.bool,
+  error: PropTypes.any,
+  repos: PropTypes.any,
 };
 
 export default WordsList;
