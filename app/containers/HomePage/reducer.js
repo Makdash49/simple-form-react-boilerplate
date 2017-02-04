@@ -21,7 +21,6 @@ const initialState = fromJS({
 });
 
 function homeReducer(state = initialState, action) {
-  console.log('ACTION.WORD: ', action.word);
   switch (action.type) {
     case CHANGE_WORD:
       return state

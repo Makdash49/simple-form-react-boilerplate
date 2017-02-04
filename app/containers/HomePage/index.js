@@ -22,7 +22,6 @@ import { makeSelectWord } from './selectors';
 import { makeSelectAllWords} from 'containers/App/selectors';
 
 import { saveWord } from '../App/actions';
-// import ReposList from 'components/ReposList';
 import WordsList from 'components/WordsList';
 
 
@@ -30,20 +29,14 @@ import WordsList from 'components/WordsList';
 export class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
 
   render() {
-    console.log('LOOKING FOR PROPS: ', this.props);
-    console.log('LOOKING FOR ALLWORDS: ', this.props.allWords);
-    var wordsArray = ['1', '2', '3'];
+    var wordsArray;
     if (this.props.allWords._tail){
-      wordsArray = this.props.allWords._tail.array
-      console.log('LOOKING FOR ALLWORDS._TAIL: ', this.props.allWords._tail.array);
+      var wordsArray = this.props.allWords._tail.array
     }
-
 
     const { loading, error } = this.props;
 
     const wordsListProps = {
-      loading,
-      error,
       wordsArray,
     };
 
@@ -57,7 +50,7 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
           <Input
             id="username"
             type="text"
-            placeholder="Enter a word here."
+            placeholder="Enter words here."
             value={this.props.word}
             onChange={this.props.onChangeWord}
           />
@@ -78,7 +71,6 @@ export function mapDispatchToProps(dispatch) {
     },
     onSubmitForm: (evt) => {
       if (evt !== undefined && evt.preventDefault) evt.preventDefault();
-      console.log('Form Submitted!');
       dispatch(saveWord(currentWord));
       dispatch(changeWord(""));
       currentWord = "";

@@ -1,15 +1,11 @@
 import React from 'react';
 
-// import Ul from './Ul';
-// import Wrapper from './Wrapper';
-
 function List(props) {
   const ComponentToRender = props.component;
   let content = (<div></div>);
 
   // If we have items, render them
   if (props.items) {
-    console.log('PROPS.ITEMS: ', props.items);
     content = props.items.map((item, index) => (
       <ComponentToRender key={`item-${index}`} item={item.text} />
     ));
@@ -19,18 +15,16 @@ function List(props) {
   }
 
   return (
-
       <div>
         {content}
-
       </div>
 
   );
 }
 
 List.propTypes = {
-  // component: React.PropTypes.func.isRequired,
-  // items: React.PropTypes.array,
+  component: React.PropTypes.func.isRequired,
+  items: React.PropTypes.array,
 };
 
 export default List;

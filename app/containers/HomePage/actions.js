@@ -21,7 +21,6 @@ import {
 
 
 export function changeWord(word) {
-  console.log('WORD: ', word);
   return {
     type: CHANGE_WORD,
     word,

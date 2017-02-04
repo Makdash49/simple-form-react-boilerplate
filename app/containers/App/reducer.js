@@ -22,11 +22,9 @@ const initialState = fromJS({
 });
 
 function appReducer(state = initialState, action) {
-  console.log('STATE!!!!!!:', state._root.entries[0][1]);
   var allTheWords = state._root.entries[0][1];
   switch (action.type) {
     case SAVE_WORD:
-    console.log('IN SAVE_WORD REDUCER');
       return state
       .setIn(['allWords'], allTheWords.concat([action.word]));
     default:
