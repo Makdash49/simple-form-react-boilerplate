@@ -5,9 +5,9 @@ const Section = styled.section`
   border-size:2px;
   border-style:solid;
   border-color:black;
-  width: 50%;
-  height: 500px;
   border-radius: 25px;
+  width: 99.5%;
+  height: 500px;
 
   &:first-child {
     margin-top: 100px;

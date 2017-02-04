@@ -3,8 +3,16 @@ import { injectGlobal } from 'styled-components';
 /* eslint no-unused-expressions: 0 */
 injectGlobal`
   html,
+
+  html {
+  background: url("http://media.istockphoto.com/vectors/abstract-digital-background-random-digits-and-letters-colored-vector-id614950396") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
   body {
-    height: 100%;
+    height: 100px%;
     width: 100%;
   }
 
