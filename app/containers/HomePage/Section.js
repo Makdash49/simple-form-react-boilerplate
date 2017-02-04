@@ -7,8 +7,9 @@ const Section = styled.section`
   border-color:black;
   border-radius: 25px;
   width: 50%;
-  height: 500px;
+  min-height: 500px;
   background-color: #fafafa;
+  padding: 15px;
 
 
   &:first-child {
