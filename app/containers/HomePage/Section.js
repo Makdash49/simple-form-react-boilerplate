@@ -6,8 +6,10 @@ const Section = styled.section`
   border-style:solid;
   border-color:black;
   border-radius: 25px;
-  width: 99.5%;
+  width: 50%;
   height: 500px;
+  background-color: #fafafa;
+
 
   &:first-child {
     margin-top: 100px;
