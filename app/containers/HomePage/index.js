@@ -13,6 +13,7 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import messages from './messages';
 
+import CenteredSection from './CenteredSection';
 import Form from './Form';
 import Input from './Input';
 import { connect } from 'react-redux';
@@ -41,7 +42,7 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
     };
 
     return (
-      <div>
+      <CenteredSection>
         <h1>
           <FormattedMessage {...messages.header} />
         </h1>
@@ -56,9 +57,7 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
           />
         </Form>
         <WordsList {...wordsListProps} />
-
-
-      </div>
+      </CenteredSection>
     );
   }
 }
