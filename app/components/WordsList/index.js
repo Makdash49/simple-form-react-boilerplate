@@ -32,13 +32,13 @@ function WordsList({ loading, error, wordsArray }) {
   //   return <List component={LoadingIndicator} />;
   // }
 
-    const ErrorComponent = () => (
-      <ListItem item={'Something went wrong, please try again!'} />
-    );
-    return <List component={ErrorComponent} />;
+    // const ErrorComponent = () => (
+    //   <ListItem item={'Something went wrong, please try again!'} />
+    // );
+    // return <List component={ErrorComponent} />;
 
-  // if (repos !== false) {
-  //   return <List items={wordsArray} component={RepoListItem} />;
+  // if (wordsArray !== false) {
+    return <List items={wordsArray} />;
   // }
 
   // return null;
@@ -47,7 +47,7 @@ function WordsList({ loading, error, wordsArray }) {
 WordsList.propTypes = {
   loading: PropTypes.bool,
   error: PropTypes.any,
-  repos: PropTypes.any,
+  wordsArray: PropTypes.any,
 };
 
 export default WordsList;
