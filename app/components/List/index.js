@@ -11,7 +11,7 @@ function List(props) {
   if (props.items) {
     console.log('PROPS.ITEMS: ', props.items);
     content = props.items.map((item, index) => (
-      <ComponentToRender key={`item-${index}`} item={item} />
+      <ComponentToRender key={`item-${index}`} item={item.text} />
     ));
   } else {
     // Otherwise render a single component
@@ -22,6 +22,8 @@ function List(props) {
 
       <div>
         Hello
+        {content}
+
       </div>
 
   );

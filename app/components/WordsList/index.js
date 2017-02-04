@@ -37,11 +37,11 @@ function WordsList({ loading, error, wordsArray }) {
     // );
     // return <List component={ErrorComponent} />;
 
-  // if (wordsArray !== false) {
-    return <List items={wordsArray} />;
-  // }
+  if (wordsArray !== false) {
+    return <List items={wordsArray} component={ListItem} />;
+  }
 
-  // return null;
+  return null;
 }
 
 WordsList.propTypes = {
