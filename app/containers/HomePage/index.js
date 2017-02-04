@@ -81,6 +81,7 @@ export function mapDispatchToProps(dispatch) {
       console.log('Form Submitted!');
       dispatch(saveWord(currentWord));
       dispatch(changeWord(""));
+      currentWord = "";
     },
   };
 }

@@ -21,7 +21,6 @@ function List(props) {
   return (
 
       <div>
-        Hello
         {content}
 
       </div>
